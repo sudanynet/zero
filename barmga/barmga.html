@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي سوداني نيت</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+        .social-icons a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مرحباً بكم في موقع سوداني نيت الإلكتروني</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">حول</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li>
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="البحث...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>أهلاً وسهلاً!</h2>
+        <p>مرحب بكم على موقعي الإلكتروني نرحب بزيارتكم</p>
+        <img src="path_to_your_image.jpg" alt="صورة رئيسية">
+    </section>
+    <section id="about">
+        <h2>حول</h2>
+        <p>موقع سوداني نيت هو وجهتك الأولى للحصول على أحدث المعلومات والأخبار عن السودان. نحن نسعى لتقديم محتوى موثوق ومحدث يخدم مجتمعنا ويساهم في نشر الوعي والمعرفة.</p>
+        <img src="path_to_your_image.jpg" alt="صورة عن الموقع">
+    </section>
+    <footer>
+        <p>&copy; 2025 موقعي الإلكتروني. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm" action="your_login_endpoint" method="post">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <p id="news">أخبار الحرب في السودان</p>
+        <!-- إضافة صورة -->
+        <img src="path_to_your_image.jpg" alt="صورة توضيحية">
+        <!-- إضافة مقال -->
+        <article>
+            <h3>السودان اليوم</h3>
+            <p>إليك آخر الأخبار حول المعارك في السودان:</p>
+            <img src="path_to_your_image.jpg" alt="صورة للسودان">
+            <p>1. **استمرار المعارك في الخرطوم**: تستمر المعارك العنيفة بين الجيش السوداني وقوات الدعم السريع في عدد من محاور العاصمة الخرطوم، خصوصًا في منطقة شرق النيل وجسر سوبا.</p>
+            <p>2. **اشتداد المعارك حول القصر الجمهوري**: اشتدت المعارك بين الجيش وقوات الدعم السريع في محيط القصر الجمهوري وسط الخرطوم، حيث استأنف الجيش عملياته العسكرية في هذا المحور.</p>
+            <p>3. **مقتل الأطفال**: أعلنت منظمة الأمم المتحدة للطفولة (يونيسف) عن مقتل ما لا يقل عن 40 طفلًا خلال ثلاثة أيام جراء عمليات القصف في مناطق مختلفة من السودان، مما يعكس المخاطر الجسيمة التي يتعرض لها الأطفال في ظل الحرب.</p>
+            <p>إذا كنت بحاجة إلى مزيد من التفاصيل حول أي من هذه الأخبار أو أخبار أخرى، فأخبرني بذلك!</p>
+        </article>
+        <!-- خيار تسجيل الدخول بالربط المباشر عبر البريد الإلكتروني -->
+        <div class="direct-link-login">
+            <h2>تسجيل الدخول بالربط المباشر</h2>
+            <form id="emailLoginForm">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" onclick="sendLoginLink()">إرسال رابط تسجيل الدخول</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function sendLoginLink() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert('تم إرسال رابط تسجيل الدخول إلى ' + email);
+            } else {
+                alert('يرجى إدخال البريد الإلكتروني');
+            }
+        }
+
+        function searchFunction() {
+            var input, filter, sections, section, i, txtValue, highlightedText;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            sections = document.querySelectorAll('section');
+            
+            // إزالة التمييز السابق
+            document.querySelectorAll('.highlight').forEach(function (el) {
+                el.classList.remove('highlight');
+            });
+
+            for (i = 0; i < sections.length; i++) {
+                section = sections[i];
+                txtValue = section.textContent || section.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    section.style.display = '';
+                    // تمييز النص المطابق
+                    highlightedText = txtValue.replace(new RegExp(filter, 'gi'), function(match) {
+                        return '<span class="highlight">' + match + '</span>';
+                    });
+                    section.innerHTML = highlightedText;
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
