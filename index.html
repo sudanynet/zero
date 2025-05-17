@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي سوداني نيت</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>مرحباً بكم في موقع سوداني نيت الإلكتروني</h1>
+        <nav aria-label="التنقل الرئيسي">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">حول</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li>
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="البحث..." aria-label="حقل البحث">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" aria-labelledby="home-title">
+            <h2 id="home-title">أهلاً وسهلاً!</h2>
+            <p>مرحب بكم على موقعي الإلكتروني نرحب بزيارتكم</p>
+            <img src="path_to_your_image.jpg" alt="صورة رئيسية">
+        </section>
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">حول</h2>
+            <p>موقع سوداني نيت هو وجهتك الأولى للحصول على أحدث المعلومات والأخبار عن السودان. نحن نسعى لتقديم محتوى موثوق ومحدث يخدم مجتمعنا ويساهم في نشر الوعي والمعرفة.</p>
+            <img src="path_to_your_image.jpg" alt="صورة عن الموقع">
+        </section>
+        <section id="downloads" aria-labelledby="downloads-title">
+            <h2 id="downloads-title">تنزيل الملفات</h2>
+            <p>يمكنك تنزيل الملفات من الروابط التالية:</p>
+            <a href="https://github.com/username/my-website/raw/main/filename.pdf" target="_blank">تنزيل الملف PDF</a>
+        </section>
+        <section id="blog" aria-labelledby="blog-title">
+            <h2 id="blog-title">مدونة</h2>
+            <article aria-labelledby="post1-title">
+                <h3 id="post1-title">عنوان المقال الأول</h3>
+                <p>هذا هو المحتوى الأساسي للمقال الأول.</p>
+                <a href="path_to_full_article.html" target="_blank">قراءة المزيد</a>
+            </article>
+            <article aria-labelledby="post2-title">
+                <h3 id="post2-title">عنوان المقال الثاني</h3>
+                <p>هذا هو المحتوى الأساسي للمقال الثاني.</p>
+                <a href="path_to_full_article.html" target="_blank">قراءة المزيد</a>
+            </article>
+            <!-- أضف المزيد من المقالات حسب الحاجة -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 موقعي الإلكتروني. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/yourprofile" target="_blank" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="إنستجرام"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/yourprofile" target="_blank" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <div class="login-container" aria-labelledby="login-title">
+        <h2 id="login-title">تسجيل الدخول</h2>
+        <form id="loginForm" action="your_login_endpoint" method="post">
+            <label for="username">اسم المستخدم</label>
+            <input type="text" id="username" name="username" required aria-required="true">
+            <label for="password">كلمة المرور</label>
+            <input type="password" id="password" name="password" required aria-required="true">
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <div class="direct-link-login" aria-labelledby="email-login-title">
+            <h2 id="email-login-title">تسجيل الدخول بالربط المباشر</h2>
+            <form id="emailLoginForm">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                <button type="button" onclick="sendLoginLink()">إرسال رابط تسجيل الدخول</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function sendLoginLink() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert('تم إرسال رابط تسجيل الدخول إلى ' + email);
+            } else {
+                alert('يرجى إدخال البريد الإلكتروني');
+            }
+        }
+
+        // فهرسة البيانات
+        var idx = lunr(function () {
+            this.field('title');
+            this.field('body');
+        
+            this.add({
+                "title": "أهلاً وسهلاً!",
+                "body": "مرحب بكم على موقعي الإلكتروني نرحب بزيارتكم"
+            });
+            this.add({
+                "title": "حول",
+                "body": "موقع سوداني نيت هو وجهتك الأولى للحصول على أحدث المعلومات والأخبار عن السودان. نحن نسعى لتقديم محتوى موثوق ومحدث يخدم مجتمعنا ويساهم في نشر الوعي والمعرفة."
+            });
+            // إضافة المزيد من المحتوى حسب الحاجة...
+        });
+
+        // البحث وعرض النتائج
+        function searchFunction() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toUpperCase();
+            var results = idx.search(filter);
+            
+            document.querySelectorAll('section').forEach(function (section) {
+                section.style.display = 'none';
+            });
+            
+            results.forEach(function (result) {
+                var section = document.querySelector(`[data-id='${result.ref}']`);
+                if (section) {
+                    section.style.display = 'block';
+                    section.classList.add('highlight');
+                }
+            });
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+        
+            // هنا يمكنك إضافة منطق إرسال البيانات إلى الخادم (backend)
+            console.log('اسم المستخدم:', username);
+            console.log('كلمة المرور:', password);
+        
+            // مثال على تحقق بسيط
+            if (username === 'admin' && password === 'password') {
+                alert('تسجيل الدخول ناجح!');
+            } else {
+                alert('اسم المستخدم أو كلمة المرور غير صحيحة.');
+            }
+        });
+        npm install -g uglify-js
+        uglifyjs yourfile.js -o yourfile.min.js
+
+        const gulp = require('gulp');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+
+gulp.task('minify-css', () => {
+    return gulp.src('src/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-js', () => {
+    return gulp.src('src/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', gulp.series('minify-css', 'minify-js'));
+
+    </script>
+</body>
+</html>
+
+
+
